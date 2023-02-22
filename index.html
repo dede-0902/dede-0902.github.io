@@ -86,15 +86,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>3-2-3 DOCTYPE（和上边差不多）</p>
-<p>3-2-4 解析开始标签</p>
+        <p><strong>3-2-2 解析条件注释</strong>（和上边差不多 /^&lt;![/）</p>
+<p><strong>3-2-3 DOCTYPE</strong>（和上边差不多）</p>
+<p><strong>3-2-4 解析开始标签</strong></p>
 <ol>
-<li><p>解析标签属性</p>
-<p> const attribute = /^\s*([^\s”‘&lt;&gt;/=]+)(?:\s*(=)\s*(?:”([^”]<em>)”+|’([^’]</em>)’+|([^\s”‘=&lt;&gt;`]+)))?/<br> let html = ‘class=”a” id=”b”&gt;</div>‘<br> let attr = html.match(attribute)<br> console.log(attr)<br> // [“class=”a””, “class”, “=”, “a”, undefined, undefined, index: 0, input: “class=”a” id=”b”&gt;</div>“, groups: undefined]</p>
-</li>
+<li>解析标签属性</li>
 </ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> attribute = <span class="regexp">/^\s*([^\s&quot;&#x27;&lt;&gt;\/=]+)(?:\s*(=)\s*(?:&quot;([^&quot;]*)&quot;+|&#x27;([^&#x27;]*)&#x27;+|([^\s&quot;&#x27;=&lt;&gt;`]+)))?/</span></span><br><span class="line"><span class="keyword">let</span> html = <span class="string">&#x27;class=&quot;a&quot; id=&quot;b&quot;&gt;&lt;/div&gt;&#x27;</span></span><br><span class="line"><span class="keyword">let</span> attr = html.<span class="title function_">match</span>(attribute)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(attr)</span><br><span class="line"><span class="comment">// [&quot;class=&quot;a&quot;&quot;, &quot;class&quot;, &quot;=&quot;, &quot;a&quot;, undefined, undefined, index: 0, input: &quot;class=&quot;a&quot; id=&quot;b&quot;&gt;&lt;/div&gt;&quot;, groups: undefined]</span></span><br></pre></td></tr></table></figure>
+
 <p>如果标签属性有多个的话，那就需要循环匹配了，匹配出第一个标签属性后，就把该属性截掉，用剩下的字符串继续匹配，直到不再满足正则为止</p>
-<ol>
+<ol start="2">
 <li>解析标签是否是自闭和</li>
 </ol>
 
