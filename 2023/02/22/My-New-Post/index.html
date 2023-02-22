@@ -5,13 +5,17 @@
   
 
   
-  <title>Archives: 2023/2 | Hexo</title>
+  <title>My New Post | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/archives/2023/02/index.html">
+  <meta name="description" content="3-2-3 DOCTYPE（和上边差不多） 3-2-4 解析开始标签  解析标签属性  const attribute &#x3D; &#x2F;^\s*([^\s”‘&lt;&gt;&#x2F;&#x3D;]+)(?:\s*(&#x3D;)\s*(?:”([^”])”+|’([^’])’+|([^\s”‘&#x3D;&lt;&gt;&#96;]+)))?&#x2F; let html &#x3D; ‘class&#x3D;”a” id&#x3D;”b”&gt;‘ let attr &#x3D; html.mat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="My New Post">
+<meta property="og:url" content="http://example.com/2023/02/22/My-New-Post/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="3-2-3 DOCTYPE（和上边差不多） 3-2-4 解析开始标签  解析标签属性  const attribute &#x3D; &#x2F;^\s*([^\s”‘&lt;&gt;&#x2F;&#x3D;]+)(?:\s*(&#x3D;)\s*(?:”([^”])”+|’([^’])’+|([^\s”‘&#x3D;&lt;&gt;&#96;]+)))?&#x2F; let html &#x3D; ‘class&#x3D;”a” id&#x3D;”b”&gt;‘ let attr &#x3D; html.mat">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-02-22T07:07:43.000Z">
+<meta property="article:modified_time" content="2023-02-22T07:08:20.989Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -62,59 +66,62 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/02/22/My-New-Post/" class="archive-article-date">
-  <time datetime="2023-02-22T07:07:43.000Z" itemprop="datePublished">Feb 22</time>
+        <section id="main"><article id="post-My-New-Post" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/02/22/My-New-Post/" class="article-date">
+  <time datetime="2023-02-22T07:07:43.000Z" itemprop="datePublished">2023-02-22</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/22/My-New-Post/">My New Post</a>
+    <h1 class="article-title" itemprop="name">
+      My New Post
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2023/02/22/hello-world/" class="archive-article-date">
-  <time datetime="2023-02-22T06:38:52.591Z" itemprop="datePublished">Feb 22</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2023/02/22/hello-world/">Hello World</a>
-    </h1>
-  
+        <p>3-2-3 DOCTYPE（和上边差不多）</p>
+<p>3-2-4 解析开始标签</p>
+<ol>
+<li><p>解析标签属性</p>
+<p> const attribute = /^\s*([^\s”‘&lt;&gt;/=]+)(?:\s*(=)\s*(?:”([^”]<em>)”+|’([^’]</em>)’+|([^\s”‘=&lt;&gt;`]+)))?/<br> let html = ‘class=”a” id=”b”&gt;</div>‘<br> let attr = html.match(attribute)<br> console.log(attr)<br> // [“class=”a””, “class”, “=”, “a”, undefined, undefined, index: 0, input: “class=”a” id=”b”&gt;</div>“, groups: undefined]</p>
+</li>
+</ol>
+<p>如果标签属性有多个的话，那就需要循环匹配了，匹配出第一个标签属性后，就把该属性截掉，用剩下的字符串继续匹配，直到不再满足正则为止</p>
+<ol>
+<li>解析标签是否是自闭和</li>
+</ol>
 
-    </header>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/02/22/My-New-Post/" data-id="clefc3zzh00003ofy1wrfdmw7" class="article-share-link">Share</a>
+      
+      
+    </footer>
   </div>
-</article>
+  
+    
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2023/02/22/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
   
+</nav>
 
+  
+</article>
 
 </section>
         

@@ -64,6 +64,53 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-My-New-Post" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/02/22/My-New-Post/" class="article-date">
+  <time datetime="2023-02-22T07:07:43.000Z" itemprop="datePublished">2023-02-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/02/22/My-New-Post/">My New Post</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>3-2-3 DOCTYPE（和上边差不多）</p>
+<p>3-2-4 解析开始标签</p>
+<ol>
+<li><p>解析标签属性</p>
+<p> const attribute = /^\s*([^\s”‘&lt;&gt;/=]+)(?:\s*(=)\s*(?:”([^”]<em>)”+|’([^’]</em>)’+|([^\s”‘=&lt;&gt;`]+)))?/<br> let html = ‘class=”a” id=”b”&gt;</div>‘<br> let attr = html.match(attribute)<br> console.log(attr)<br> // [“class=”a””, “class”, “=”, “a”, undefined, undefined, index: 0, input: “class=”a” id=”b”&gt;</div>“, groups: undefined]</p>
+</li>
+</ol>
+<p>如果标签属性有多个的话，那就需要循环匹配了，匹配出第一个标签属性后，就把该属性截掉，用剩下的字符串继续匹配，直到不再满足正则为止</p>
+<ol>
+<li>解析标签是否是自闭和</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/02/22/My-New-Post/" data-id="clefc3zzh00003ofy1wrfdmw7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2023/02/22/hello-world/" class="article-date">
@@ -142,6 +189,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2023/02/22/My-New-Post/">My New Post</a>
+          </li>
         
           <li>
             <a href="/2023/02/22/hello-world/">Hello World</a>
